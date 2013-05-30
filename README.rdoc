@@ -1,11 +1,9 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This is the tutorial app from Agile Web Development with Rails, 4th Edition
 
 * Ruby version
+ruby2.0.0
 
 * System dependencies
 
