@@ -20,7 +20,7 @@ class ProductTest < ActiveSupport::TestCase
   							image_url: 		"zzz.jpg")
   	product.price = -1
   	assert product.invalid?
-  	assert_equal ["must be greater than or equal to 0.01"]
+  	assert_equal ["must be greater than or equal to 0.01"],
   		product.errors[:price]
 
   	product.price = 0
@@ -33,7 +33,7 @@ class ProductTest < ActiveSupport::TestCase
   end
 
   def new_product(image_url)
-  	Product.new(	title: 		"My Book Title",
+  	Product.new(	title: 			"My Book Title",
   					description: 	"yyy",
   					price: 			1,
   					image_url: 		image_url)
@@ -62,5 +62,18 @@ class ProductTest < ActiveSupport::TestCase
   	assert product.invalid?
   	assert_equal ["has already been taken"],
   product.errors[:title]
+  end
+
+  test "title must be at least 10 characters" do
+  	product = Product.new(	description: 	"yyy",
+  							price: 			1,
+  							image_url: 		"zzz.jpg")
+  	product.title = "Tooshort"
+  	assert product.invalid?
+  	assert_equal ["is too short (minimum is 10 characters)"],
+  		product.errors[:title]
+
+  	product.title = "Longenough"
+  	assert product.valid?
   end
 end
