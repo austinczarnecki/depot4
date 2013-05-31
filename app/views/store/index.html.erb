@@ -8,6 +8,11 @@
 
 <h1>Your Pragmatic Catalog</h1>
 
+<% if session[:counter] > 5 %>
+	<%= "You have visited this page" %>
+	<%= pluralize session[:counter], 'time' %>
+<% end %>
+
 <% @products.each do |product| %>
 	<div class="entry">
 		<%= image_tag(product.image_url) %>
