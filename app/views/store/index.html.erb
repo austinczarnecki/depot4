@@ -15,7 +15,7 @@
 
 <% @products.each do |product| %>
 	<div class="entry">
-		<%= image_tag(product.image_url) %>
+		<%= image_tag(product.image_url, id: dom_id(product)) %>
 
 		<h3>
 			<%= product.title %>
@@ -28,8 +28,8 @@
 		<div class="price_line">
 			<span class="price">
 				<%= number_to_currency(product.price) %>
+				<%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %>
 			</span>
-			<%= button_to 'Add to Cart', line_items_path(product_id: product) %>
 		</div>
 	</div>
 <% end %>
