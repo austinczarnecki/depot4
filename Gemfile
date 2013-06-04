@@ -45,3 +45,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'therubyracer'
+
+# Previews an email in the browser rather than sending it
+# while in development mode only
+gem "letter_opener", :group => :development
