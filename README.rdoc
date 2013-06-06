@@ -3,9 +3,10 @@
 This is the tutorial app from Agile Web Development with Rails, 4th Edition
 
 * Ruby version
-ruby2.0.0
+ruby1.9.3p429
 
 * System dependencies
+rails4.0.0.rc1
 
 * Configuration
 

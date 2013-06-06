@@ -1,0 +1,16 @@
+TODO:
+
+Fix test failures and errors
+	1. update fixtures to match current database structure
+	2. update tests to match new fixtures
+
+Fix problem with mailer (uncertain what's wrong now)
+
+Read about RSS feeds and how to structure feed output
+
+Chapter 13.3 Playtime
+	1. add a ship_date column to the orders table
+	2. send an email when the ship_date is changed
+	3. send an email to the system admin when there is an application faillure.
+	4. add integration tests for above items
+

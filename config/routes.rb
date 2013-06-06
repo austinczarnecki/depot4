@@ -1,4 +1,17 @@
 Depot4::Application.routes.draw do
+
+  controller :admin do
+    get 'admin' => :index
+  end
+
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
+  resources :users
+
   resources :orders
 
   resources :line_items
