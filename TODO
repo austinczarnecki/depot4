@@ -16,3 +16,7 @@ Chapter 13.3 Playtime
 
 Chapter 14 Playtime
 
+Fix java/coffescript links in cart
+	1. 'remove' button doesn't deincrement line items out of cart
+	2. checkout button is disabled when page is refreshed, not just when proceeding to the order page.
+	3. no flash effect when first item is added to cart.
